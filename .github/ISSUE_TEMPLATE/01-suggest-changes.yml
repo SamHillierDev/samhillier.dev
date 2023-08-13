@@ -1,0 +1,25 @@
+name: "✍️ ​​Suggest Changes"
+description: Help me improve my portfolio by suggesting changes.
+labels: [suggestion]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to help me improve my portfolio with your suggestions.
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Please provide the URL of where you are suggesting changes to.
+      placeholder: https://samhillier.dev
+    validations:
+      required: true
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions
+      description: What changes would you like to suggest?
+      placeholder: Enter your suggestions here.
+    validations:
+      required: true
