@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📝 ​​Typo or Grammatical Mistake
+    url: https://github.com/SamHillierDev/portfolio/pulls
+    about: Please submit a pull request instead of reporting it as an issue.
+  - name: 🤝 ​Community
+    url: https://discord.com/invite/XfZHVfPr9C
+    about: Join my community Discord server.
