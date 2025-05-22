@@ -3,7 +3,7 @@ import awsAIPractitionerEarlyAdopter from "../assets/images/certifications/aws-a
 import awsMachineLearningEngineerAssociateEarlyAdopter from "../assets/images/certifications/aws-machine-learning-engineer-associate-early-adopter.png";
 import awsCloudPractitioner from "../assets/images/certifications/aws-cloud-practitioner-foundational.png";
 import awsAIPractitioner from "../assets/images/certifications/aws-ai-practitioner-foundational.png";
-// import awsSysOpsAdministratorAssociate from "../assets/images/certifications/aws-sysops-administrator-associate.png";
+import awsSysOpsAdministratorAssociate from "../assets/images/certifications/aws-sysops-administrator-associate.png";
 import awsDeveloperAssociate from "../assets/images/certifications/aws-developer-associate.png";
 import awsSolutionsArchitectAssociate from "../assets/images/certifications/aws-solutions-architect-associate.png";
 // import awsDataEngineerAssociate from "../assets/images/certifications/aws-data-engineer-associate.png";
@@ -40,11 +40,11 @@ const certifications = [
     alt: "AWS Certified AI Practitioner",
     url: "https://www.credly.com/badges/cd51660c-b4b3-4348-8474-6111af2d9f59",
   },
-  // {
-  //   src: awsSysOpsAdministratorAssociate,
-  //   alt: "AWS Certified SysOps Administrator - Associate",
-  //   url: "#",
-  // },
+  {
+    src: awsSysOpsAdministratorAssociate,
+    alt: "AWS Certified SysOps Administrator - Associate",
+    url: "https://www.credly.com/badges/be6514ff-d034-42ec-9c2d-67b1a55df3e9",
+  },
   {
     src: awsDeveloperAssociate,
     alt: "AWS Certified Developer - Associate",
