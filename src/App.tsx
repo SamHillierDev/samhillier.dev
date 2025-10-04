@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div>
+      <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="container mx-auto mt-20">
+        <main className="flex-1 container mx-auto mt-20">
           <Routes>
             <Route
               path="/"
