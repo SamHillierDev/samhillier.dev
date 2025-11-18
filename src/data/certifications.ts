@@ -1,15 +1,18 @@
 import microsoftAzureFundamentals from "../assets/images/certifications/microsoft-azure-fundamentals.png";
 import awsAIPractitionerEarlyAdopter from "../assets/images/certifications/aws-ai-practitioner-foundational-early-adopter.png";
 import awsMachineLearningEngineerAssociateEarlyAdopter from "../assets/images/certifications/aws-machine-learning-engineer-associate-early-adopter.png";
+// import awsGenerativeAIDeveloperProfessionalEarlyAdopter from "../assets/images/certifications/aws-generative-ai-developer-professional-early-adopter.png";
 import awsCloudPractitioner from "../assets/images/certifications/aws-cloud-practitioner-foundational.png";
 import awsAIPractitioner from "../assets/images/certifications/aws-ai-practitioner-foundational.png";
 import awsSysOpsAdministratorAssociate from "../assets/images/certifications/aws-sysops-administrator-associate.png";
+// import awsCloudOpsEngineerAssociate from "../assets/images/certifications/aws-cloudops-engineer-associate.png";
 import awsDeveloperAssociate from "../assets/images/certifications/aws-developer-associate.png";
 import awsSolutionsArchitectAssociate from "../assets/images/certifications/aws-solutions-architect-associate.png";
 // import awsDataEngineerAssociate from "../assets/images/certifications/aws-data-engineer-associate.png";
 import awsMachineLearningEngineerAssociate from "../assets/images/certifications/aws-machine-learning-engineer-associate.png";
 // import awsSolutionsArchitectProfessional from "../assets/images/certifications/aws-solutions-architect-professional.png";
 // import awsDevOpsEngineerProfessional from "../assets/images/certifications/aws-devops-engineer-professional.png";
+// import awsGenerativeAIDeveloperProfessional from "../assets/images/certifications/aws-generative-ai-developer-professional.png";
 // import awsAdvancedNetworkingSpecialty from "../assets/images/certifications/aws-advanced-networking-specialty.png";
 // import awsMachineLearningSpecialty from "../assets/images/certifications/aws-machine-learning-specialty.png";
 import awsSecuritySpecialty from "../assets/images/certifications/aws-security-specialty.png";
@@ -30,6 +33,11 @@ const certifications = [
     alt: "AWS Certified Machine Learning Engineer - Associate Early Adopter",
     url: "https://www.credly.com/badges/36cf1b67-ed10-4ee1-b1f0-90848775df70",
   },
+  // {
+  //   src: awsGenerativeAIDeveloperProfessionalEarlyAdopter,
+  //   alt: "AWS Certified Generative AI Developer - Professional Early Adopter",
+  //   url: "#",
+  // },
   {
     src: awsCloudPractitioner,
     alt: "AWS Certified Cloud Practitioner",
@@ -45,6 +53,11 @@ const certifications = [
     alt: "AWS Certified SysOps Administrator - Associate",
     url: "https://www.credly.com/badges/be6514ff-d034-42ec-9c2d-67b1a55df3e9",
   },
+  // {
+  //   src: awsCloudOpsEngineerAssociate,
+  //   alt: "AWS Certified CloudOps Engineer - Associate",
+  //   url: "#",
+  // },
   {
     src: awsDeveloperAssociate,
     alt: "AWS Certified Developer - Associate",
@@ -73,6 +86,11 @@ const certifications = [
   // {
   //   src: awsDevOpsEngineerProfessional,
   //   alt: "AWS Certified DevOps Engineer - Professional",
+  //   url: "#",
+  // },
+  // {
+  //   src: awsGenerativeAIDeveloperProfessional,
+  //   alt: "AWS Certified Generative AI Developer - Professional",
   //   url: "#",
   // },
   // {
