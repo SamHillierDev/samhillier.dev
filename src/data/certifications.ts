@@ -14,7 +14,7 @@ import awsMachineLearningEngineerAssociate from "../assets/images/certifications
 // import awsDevOpsEngineerProfessional from "../assets/images/certifications/aws-devops-engineer-professional.png";
 // import awsGenerativeAIDeveloperProfessional from "../assets/images/certifications/aws-generative-ai-developer-professional.png";
 // import awsAdvancedNetworkingSpecialty from "../assets/images/certifications/aws-advanced-networking-specialty.png";
-// import awsMachineLearningSpecialty from "../assets/images/certifications/aws-machine-learning-specialty.png";
+import awsMachineLearningSpecialty from "../assets/images/certifications/aws-machine-learning-specialty.png";
 import awsSecuritySpecialty from "../assets/images/certifications/aws-security-specialty.png";
 
 const certifications = [
@@ -98,11 +98,11 @@ const certifications = [
   //   alt: "AWS Certified Advanced Networking - Specialty",
   //   url: "#",
   // },
-  // {
-  //   src: awsMachineLearningSpecialty,
-  //   alt: "AWS Certified Machine Learning - Specialty",
-  //   url: "#",
-  // },
+  {
+    src: awsMachineLearningSpecialty,
+    alt: "AWS Certified Machine Learning - Specialty",
+    url: "https://www.credly.com/badges/f2537733-2032-4c4d-a1e3-fbde970b1b1b",
+  },
   {
     src: awsSecuritySpecialty,
     alt: "AWS Certified Security - Specialty",
