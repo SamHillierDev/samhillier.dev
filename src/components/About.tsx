@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <div className="flex flex-col items-center gap-6 xl:flex-row xl:items-start">
             <div className="h-32 w-32 flex-shrink-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 xl:h-40 xl:w-40">
               <img
-                src="https://raw.githubusercontent.com/SamHillierDev/samhillier.dev/main/src/assets/images/sam-hillier.jpg"
+                src="https://samhillier.dev/assets/images/sam-hillier.jpg"
                 alt="Sam Hillier"
                 className="h-full w-full cursor-pointer rounded-full shadow-lg transition hover:scale-105"
               />
