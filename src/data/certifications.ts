@@ -1,7 +1,9 @@
 import microsoftAzureFundamentals from "../assets/images/certifications/microsoft-azure-fundamentals.png";
+import awsAIBusinessStrategistBusinessEarlyAdopter from "../assets/images/certifications/aws-ai-business-strategist-business-early-adopter.png";
 import awsAIPractitionerEarlyAdopter from "../assets/images/certifications/aws-ai-practitioner-foundational-early-adopter.png";
 import awsMachineLearningEngineerAssociateEarlyAdopter from "../assets/images/certifications/aws-machine-learning-engineer-associate-early-adopter.png";
 // import awsGenerativeAIDeveloperProfessionalEarlyAdopter from "../assets/images/certifications/aws-generative-ai-developer-professional-early-adopter.png";
+import awsAIBusinessStrategist from "../assets/images/certifications/aws-ai-business-strategist-business.png";
 import awsCloudPractitioner from "../assets/images/certifications/aws-cloud-practitioner-foundational.png";
 import awsAIPractitioner from "../assets/images/certifications/aws-ai-practitioner-foundational.png";
 import awsSysOpsAdministratorAssociate from "../assets/images/certifications/aws-sysops-administrator-associate.png";
@@ -24,6 +26,11 @@ const certifications = [
     url: "https://learn.microsoft.com/en-gb/users/zyphaex/credentials/582f6909fd09237f",
   },
   {
+    src: awsAIBusinessStrategistBusinessEarlyAdopter,
+    alt: "AWS Certified AI Business Strategist Early Adopter",
+    url: "#",
+  },
+  {
     src: awsAIPractitionerEarlyAdopter,
     alt: "AWS Certified AI Practitioner Early Adopter",
     url: "https://www.credly.com/badges/afe8b909-aed7-450d-b906-5e2abfa8d37f",
@@ -38,6 +45,11 @@ const certifications = [
   //   alt: "AWS Certified Generative AI Developer - Professional Early Adopter",
   //   url: "#",
   // },
+  {
+    src: awsAIBusinessStrategist,
+    alt: "AWS Certified AI Business Strategist",
+    url: "#",
+  },
   {
     src: awsCloudPractitioner,
     alt: "AWS Certified Cloud Practitioner",
