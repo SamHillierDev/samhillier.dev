@@ -1,34 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import About from "./components/About";
-// import Projects from "./components/Projects";
-import ProjectDetail from "./components/ProjectDetail";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Certifications from "./components/Certifications";
+import Experience from "./components/Experience";
+import Cs2Showcase from "./components/Cs2Showcase";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1 container mx-auto mt-20">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <About />
-                  {/* <Projects /> */}
-                </>
-              }
-            />
-            <Route path="/projects/:projectId" element={<ProjectDetail />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Nav />
+      <main>
+        {/* Hero and badges fill exactly one screen, so the next scroll lands on CS2.TEAM. */}
+        <div className="flex min-h-svh flex-col">
+          <Hero />
+          <Certifications />
+        </div>
+        <Cs2Showcase />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Skills />
+      </main>
+      <Footer />
+    </>
   );
 }
 

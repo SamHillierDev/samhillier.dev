@@ -22,21 +22,25 @@ import awsSecuritySpecialty from "../assets/images/certifications/aws-security-s
 const certifications = [
   {
     src: microsoftAzureFundamentals,
+    glow: "#1a7fe0",
     alt: "Microsoft Azure Fundamentals",
     url: "https://learn.microsoft.com/en-gb/users/zyphaex/credentials/582f6909fd09237f",
   },
   {
     src: awsAIBusinessStrategistBusinessEarlyAdopter,
+    glow: "#e0157a",
     alt: "AWS Certified AI Business Strategist Early Adopter",
     url: "#",
   },
   {
     src: awsAIPractitionerEarlyAdopter,
+    glow: "#8a9bb4",
     alt: "AWS Certified AI Practitioner Early Adopter",
     url: "https://www.credly.com/badges/afe8b909-aed7-450d-b906-5e2abfa8d37f",
   },
   {
     src: awsMachineLearningEngineerAssociateEarlyAdopter,
+    glow: "#3a5ae0",
     alt: "AWS Certified Machine Learning Engineer - Associate Early Adopter",
     url: "https://www.credly.com/badges/36cf1b67-ed10-4ee1-b1f0-90848775df70",
   },
@@ -47,21 +51,25 @@ const certifications = [
   // },
   {
     src: awsAIBusinessStrategist,
+    glow: "#e0157a",
     alt: "AWS Certified AI Business Strategist",
     url: "#",
   },
   {
     src: awsCloudPractitioner,
+    glow: "#8a9bb4",
     alt: "AWS Certified Cloud Practitioner",
     url: "https://www.credly.com/badges/46b0dd0e-2577-4a7c-870f-baa6279bac20",
   },
   {
     src: awsAIPractitioner,
+    glow: "#8a9bb4",
     alt: "AWS Certified AI Practitioner",
     url: "https://www.credly.com/badges/cd51660c-b4b3-4348-8474-6111af2d9f59",
   },
   {
     src: awsSysOpsAdministratorAssociate,
+    glow: "#3f55f0",
     alt: "AWS Certified SysOps Administrator - Associate",
     url: "https://www.credly.com/badges/be6514ff-d034-42ec-9c2d-67b1a55df3e9",
   },
@@ -72,11 +80,13 @@ const certifications = [
   // },
   {
     src: awsDeveloperAssociate,
+    glow: "#3f55f0",
     alt: "AWS Certified Developer - Associate",
     url: "https://www.credly.com/badges/4be44f3f-99b6-46e9-ae4d-dc7332192f84",
   },
   {
     src: awsSolutionsArchitectAssociate,
+    glow: "#3f55f0",
     alt: "AWS Certified Solutions Architect - Associate",
     url: "https://www.credly.com/badges/d82b9825-86a8-4430-bb62-74969ffe2768",
   },
@@ -87,6 +97,7 @@ const certifications = [
   // },
   {
     src: awsMachineLearningEngineerAssociate,
+    glow: "#3f55f0",
     alt: "AWS Certified Machine Learning Engineer - Associate",
     url: "https://www.credly.com/badges/4cec980b-3756-4e0e-ad3a-a2aa2291f794",
   },
@@ -112,11 +123,13 @@ const certifications = [
   // },
   {
     src: awsMachineLearningSpecialty,
+    glow: "#6e4fe0",
     alt: "AWS Certified Machine Learning - Specialty",
     url: "https://www.credly.com/badges/f2537733-2032-4c4d-a1e3-fbde970b1b1b",
   },
   {
     src: awsSecuritySpecialty,
+    glow: "#7a4ae6",
     alt: "AWS Certified Security - Specialty",
     url: "https://www.credly.com/badges/37cc2f33-2b0f-44e5-9815-3dc86c1fc9a2",
   },

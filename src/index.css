@@ -1,9 +1,45 @@
 @import "tailwindcss";
 
+/* Short desktop screens (e.g. 1366×768, 1280×720), where the hero tightens so the badges stay above the fold. */
+@custom-variant short (@media (min-width: 768px) and (max-height: 800px));
+
 @theme {
-  --font-sans: Poppins, sans-serif;
+  --font-sans: Geist, system-ui, sans-serif;
+  --font-display: Geist, system-ui, sans-serif;
+  --font-cs2: "Chakra Petch", "Inter Tight", sans-serif;
+
+  --color-paper: #000000;
+  --color-surface: #0a0a0a;
+  --color-ink: #ededed;
+  --color-mute: #a1a1a1;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-brand: #ff2f3b;
+  --color-cs2: #ff6a00;
+  --color-cs2-night: #17161c;
 
   --animate-blink: blink 1s step-end infinite;
+  --animate-wave: wave 1.8s ease-in-out 0.3s 1 both;
+
+  @keyframes wave {
+    0%,
+    60%,
+    100% {
+      transform: rotate(0deg);
+    }
+    10%,
+    30% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
 
   @keyframes blink {
     0%,
@@ -23,5 +59,104 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    /* Faint light falling from the top of the page. */
+    background:
+      radial-gradient(
+          ellipse 70% 60% at 50% -10%,
+          rgb(255 255 255 / 0.09),
+          transparent 70%
+        )
+        0 0 / 100% 900px no-repeat,
+      var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+/* Offset outline ring with a comet of light orbiting it, plus a blurred glow trail. */
+@property --glow-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@utility glow-ring {
+  /* The bloom uses z-index: -1, so the parent needs `isolate` to keep it behind the button. */
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: conic-gradient(
+      from var(--glow-angle),
+      rgb(255 255 255 / 0.18) 0%,
+      rgb(255 255 255 / 0.18) 45%,
+      rgb(255 47 59 / 0.6) 72%,
+      rgb(255 255 255 / 1) 92%,
+      rgb(255 255 255 / 0.18) 100%
+    );
+  }
+
+  /* Crisp 1.5px ring, offset from the button. */
+  &::before {
+    inset: -6px;
+    padding: 1.5px;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+  }
+
+  /* Soft bloom behind the ring. */
+  &::after {
+    inset: -10px;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0.55;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &::before,
+    &::after {
+      animation: glow-orbit 3s linear infinite;
+    }
+  }
+
+  &::after {
+    transition: opacity 300ms ease;
+  }
+
+  &:hover::after {
+    opacity: 0.9;
+  }
+}
+
+@keyframes glow-orbit {
+  to {
+    --glow-angle: 360deg;
   }
 }

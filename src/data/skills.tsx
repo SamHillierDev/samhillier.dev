@@ -1,26 +1,27 @@
 export const skills = [
   {
-    name: "TypeScript",
-    badge:
-      "https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff",
+    category: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "SQL", "HTML", "CSS"],
   },
   {
-    name: "JavaScript",
-    badge:
-      "https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000",
+    category: "Frameworks",
+    items: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Tailwind",
+      "Terraform",
+      "AWS CDK",
+    ],
   },
   {
-    name: "Python",
-    badge:
-      "https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff",
+    category: "Testing",
+    items: ["Vitest", "Jest", "Playwright", "Cypress"],
   },
   {
-    name: "HTML",
-    badge:
-      "https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white",
-  },
-  {
-    name: "CSS",
-    badge: "https://img.shields.io/badge/CSS-1572B6?logo=css&logoColor=fff",
+    category: "Tools",
+    items: ["AWS", "Azure", "Docker", "MongoDB", "Vite", "Git", "Jira"],
   },
 ];

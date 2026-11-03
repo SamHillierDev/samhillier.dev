@@ -1,45 +1,74 @@
-import cs2TeamLogo from "../assets/images/projects/cs2Team.jpg";
-import cs2TeamBanner from "../assets/images/projects/cs2team-banner.jpg";
-import derbyEsportsLogo from "../assets/images/projects/derby-esports-mockup.png";
-import derbyEsportsBanner from "../assets/images/projects/derby-esports-banner.png";
+import {
+  faChartLine,
+  faMagnifyingGlass,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
+import cs2TeamLogo from "../assets/images/projects/cs2team-dark.jpg";
+import enjinFeature from "../assets/images/projects/enjin-feature.jpg";
+import derbyEsportsMockup from "../assets/images/projects/derby-esports-mockup.png";
 // import cleanappLogo from "../assets/images/projects/cleanapp-logo-blue.png";
-// import cleanappBanner from "../assets/images/projects/cleanapp-banner.png";
 
-const projects = {
-  cs2team: {
-    title: "CS2.TEAM",
-    tagline: "Find esports teams and players on CS2.TEAM.",
-    content:
-      "At CS2.TEAM, our mission is to connect aspiring players with esports teams.<br /><br />" +
-      "Whether you're a solo player searching for a squad or a team seeking new talent,<br />" +
-      "our platform is designed to help you elevate your game to the next level.<br /><br />" +
-      "Founded on 22nd March, 2023, by Sam Hillier. CS2.TEAM emerged from the firsthand experience of recruiting players for the team Derby Esports, and the realisation of the need for a more streamlined and effective way to recruit players and manage a team.",
-    logo: cs2TeamLogo,
-    banner: cs2TeamBanner,
-    link: "https://linkedin.com/company/cs2team",
-    gallery: ["#", "#"],
+export interface Project {
+  title: string;
+  tagline: string;
+  description: string;
+  image: string;
+  link: string;
+  linkLabel: string;
+  stack?: string[];
+}
+
+export const featured = {
+  title: "CS2.TEAM",
+  // Line break puts the game's name on the second line; the word joiner and no-break space keep "Counter-Strike 2" together.
+  tagline:
+    "I've built the largest\nCounter-\u2060Strike\u00a02 team-finding platform.",
+  founded: "March 2023",
+  logo: cs2TeamLogo,
+  link: "https://cs2.team",
+  linkLabel: "Visit CS2.TEAM",
+  press: {
+    outlet: "Enjin",
+    headline: "CS2.TEAM Introduces NFTs to Esports Team Finder",
+    description:
+      "Enjin spotlighted CS2.TEAM in its Ecosystem Showcase, covering how the platform brings NFTs to esports team-finding.",
+    image: enjinFeature,
+    link: "https://enjin.io/blog/cs-2-team-introduces-nf-ts-to-esports-team-finder/",
+    linkLabel: "Read the article",
   },
-  derbyesports: {
-    title: "Derby Esports",
-    tagline: "Esports organisation and gaming community.",
-    content:
-      "Derby Esports is committed to empowering gamers, promoting esports competitions, and fostering a sense of community.<br /><br />" +
-      "From amateur events to professional leagues, Derby Esports is your gateway to competitive gaming.",
-    logo: derbyEsportsLogo,
-    banner: derbyEsportsBanner,
+  stack: ["TypeScript", "React", "Node.js", "AWS"],
+  stats: [
+    { icon: faUsers, value: "10,000+", label: "registered users" },
+    {
+      icon: faMagnifyingGlass,
+      value: "5,000+",
+      label: "Google search clicks in 28 days",
+    },
+    {
+      icon: faChartLine,
+      value: "£1,000+",
+      label: "annual recurring revenue",
+    },
+  ],
+  partner: {
+    name: "Derby Esports",
+    description:
+      "CS2.TEAM grew out of recruiting for Derby Esports, a community committed to empowering gamers and promoting esports competitions, from amateur events to professional leagues.",
+    image: derbyEsportsMockup,
     link: "https://x.com/derbyesports",
-    gallery: ["#", "#"],
+    linkLabel: "Follow on X",
   },
-  // cleanapp: {
-  //   title: "Cleanapp",
-  //   tagline: "Simplifying cleanliness with smart solutions.",
-  //   content:
-  //     "Cleanapp is your go-to solution for managing cleanliness, whether at home or in the workplace. With user-friendly features and a focus on sustainability, Cleanapp ensures your spaces are spotless.",
-  //   logo: cleanappLogo,
-  //   banner: cleanappBanner,
-  //   link: "http://cleanapp.com",
-  //   gallery: ["#", "#"],
-  // },
 };
 
-export default projects;
+// The "More projects" section and its nav link stay hidden while this is empty.
+export const projects: Project[] = [
+  // {
+  //   title: "Cleanapp",
+  //   tagline: "Simplifying cleanliness with smart solutions.",
+  //   description:
+  //     "Managing cleanliness at home or in the workplace, with a focus on sustainability.",
+  //   image: cleanappLogo,
+  //   link: "http://cleanapp.com",
+  //   linkLabel: "Visit Cleanapp",
+  // },
+];
