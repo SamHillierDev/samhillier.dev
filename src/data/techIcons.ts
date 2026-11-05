@@ -16,7 +16,11 @@ import {
   faReact,
   faTypescript,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faMasksTheater } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDatabase,
+  faMasksTheater,
+  faRobot,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   type SimpleIcon,
   siCypress,
@@ -59,6 +63,7 @@ const techIcons: Record<string, IconDefinition> = {
   Playwright: faMasksTheater,
   Cypress: fromSimpleIcon(siCypress),
   AWS: faAws,
+  LLM: faRobot,
   Azure: faMicrosoft,
   Docker: faDocker,
   MongoDB: fromSimpleIcon(siMongodb),

@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Certifications from "./components/Certifications";
 import Experience from "./components/Experience";
 import Cs2Showcase from "./components/Cs2Showcase";
+import ReviewCvShowcase from "./components/ReviewCvShowcase";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -24,6 +25,7 @@ function App() {
           <Certifications />
         </div>
         <Cs2Showcase />
+        <ReviewCvShowcase />
         <Experience />
         <Projects />
         <Contact />
