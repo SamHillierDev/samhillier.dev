@@ -44,17 +44,20 @@ export const featured = {
     linkLabel: "Read the article",
   },
   stack: ["TypeScript", "Next.js", "Node.js", "AWS"],
+  // Below lg, stats use shortLabel (where given) so every label fits its column on one line.
   stats: [
     { icon: faUsers, value: "10,000+", label: "registered users" },
     {
       icon: faMagnifyingGlass,
       value: "5,000+",
       label: "Google search clicks in 28 days",
+      shortLabel: "search clicks",
     },
     {
       icon: faChartLine,
       value: "£1,000+",
       label: "annual recurring revenue",
+      shortLabel: "annual revenue",
     },
   ],
   partner: {

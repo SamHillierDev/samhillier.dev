@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         alt="Sam Hillier"
         width={320}
         height={320}
-        className="ring-brand ring-offset-paper h-20 w-20 justify-self-center rounded-full object-cover ring-2 ring-offset-4 sm:h-24 sm:w-24 md:order-last md:h-[min(16rem,38svh)] md:w-[min(16rem,38svh)] md:justify-self-auto md:ring-offset-8 lg:h-[min(20rem,38svh)] lg:w-[min(20rem,38svh)]"
+        className="ring-brand ring-offset-paper h-28 w-28 justify-self-center rounded-full object-cover ring-2 ring-offset-4 sm:h-32 sm:w-32 md:order-last md:h-[min(16rem,38svh)] md:w-[min(16rem,38svh)] md:justify-self-auto md:ring-offset-8 lg:h-[min(20rem,38svh)] lg:w-[min(20rem,38svh)]"
       />
       <div>
         <h1 className="font-display flex items-center justify-center gap-[0.2em] pb-2 text-[clamp(3rem,8vw,6rem)] leading-[0.9] font-bold tracking-[-0.045em] md:justify-start">
@@ -81,11 +81,11 @@ const Hero: React.FC = () => {
             <span className="animate-blink text-brand font-normal">|</span>
           </span>
         </p>
-        <p className="text-ink/80 short:mt-5 mt-8 max-w-xl text-lg leading-relaxed">
+        <p className="text-ink/80 short:mt-5 mx-auto mt-8 max-w-xl text-center text-lg leading-relaxed text-balance md:mx-0 md:text-left md:text-pretty">
           Software engineer working across cloud infrastructure, backend systems
           and machine learning.
         </p>
-        <div className="short:mt-5 isolate mt-6 flex flex-wrap gap-3 sm:mt-8">
+        <div className="short:mt-5 isolate mt-6 flex flex-wrap justify-center gap-3 sm:mt-8 md:justify-start">
           <a
             href={linkedIn.url}
             target="_blank"

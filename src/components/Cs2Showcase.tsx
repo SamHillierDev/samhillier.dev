@@ -73,17 +73,28 @@ const Cs2Showcase: React.FC = () => {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <dl className="grid gap-10 border-t border-white/10 pt-12 sm:grid-cols-3">
+        {/* One row of three at every width. Below lg the columns are too narrow for icon and figure side by side, so each stat stacks icon, figure and label, centred, with the figure scaled to fit. */}
+        <dl className="grid grid-cols-3 gap-x-3 border-t border-white/10 pt-12 sm:gap-x-6 lg:gap-10">
           {featured.stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col-reverse">
-              {/* Indented by the icon slot width plus gap so the label lines up with the figure. */}
-              <dt className="mt-2 pl-14 text-white/55 sm:pl-16">
-                {stat.label}
+            <div
+              key={stat.label}
+              className="flex flex-col-reverse items-center justify-end text-center lg:items-stretch lg:text-left"
+            >
+              {/* From lg, indented by the icon slot width plus gap so the label lines up with the figure. */}
+              <dt className="mt-1.5 text-xs whitespace-nowrap text-white/55 sm:text-sm lg:mt-2 lg:pl-16 lg:text-base lg:whitespace-normal">
+                {"shortLabel" in stat ? (
+                  <>
+                    <span className="lg:hidden">{stat.shortLabel}</span>
+                    <span className="hidden lg:inline">{stat.label}</span>
+                  </>
+                ) : (
+                  stat.label
+                )}
               </dt>
-              <dd className="font-display text-cs2 flex items-center gap-4 text-5xl font-bold tracking-tight sm:text-6xl">
+              <dd className="font-display text-cs2 flex flex-col items-center gap-2 text-[clamp(1.25rem,6.5vw,2.5rem)] font-bold tracking-tight lg:flex-row lg:gap-4 lg:text-5xl xl:text-6xl">
                 <span
                   aria-hidden="true"
-                  className="flex w-10 shrink-0 justify-center text-[0.6em] text-white sm:w-12"
+                  className="flex shrink-0 justify-center text-[0.75em] text-white lg:w-12 lg:text-[0.6em]"
                 >
                   <FontAwesomeIcon icon={stat.icon} />
                 </span>
