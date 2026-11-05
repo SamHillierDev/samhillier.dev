@@ -39,10 +39,9 @@ const Cs2Showcase: React.FC = () => {
             <p className="text-sm text-white/55">Founded {featured.founded}</p>
             <p className="font-cs2 mx-auto mt-3 max-w-4xl text-[clamp(1.6rem,4vw,2.5rem)] leading-[1.15] font-semibold tracking-tight text-balance text-white">
               {featured.tagline.lead}{" "}
-              <span className="text-cs2 italic">
+              <span className="text-cs2 pr-[0.08em] italic">
                 {featured.tagline.highlight}
-              </span>
-              <br />
+              </span>{" "}
               {featured.tagline.rest}
             </p>
 

@@ -1,7 +1,6 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Certifications from "./components/Certifications";
-import Experience from "./components/Experience";
 import Cs2Showcase from "./components/Cs2Showcase";
 import ReviewCvShowcase from "./components/ReviewCvShowcase";
 import Projects from "./components/Projects";
@@ -26,7 +25,6 @@ function App() {
         </div>
         <Cs2Showcase />
         <ReviewCvShowcase />
-        <Experience />
         <Projects />
         <Contact />
         <Skills />

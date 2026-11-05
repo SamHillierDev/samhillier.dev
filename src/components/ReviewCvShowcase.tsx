@@ -31,17 +31,14 @@ const ReviewCvMark: React.FC<{ className?: string }> = ({ className }) => (
 
 const ReviewCvShowcase: React.FC = () => {
   return (
-    <section
-      id="reviewcv"
-      className="bg-rcv-night border-line border-b text-white"
-    >
+    <section id="reviewcv" className="bg-paper text-white">
       <div className="relative overflow-hidden pb-12 sm:pb-16">
         <div className="pointer-events-none absolute top-[85%] left-1/2 aspect-square w-[140vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(47,125,255,0.28),transparent)]" />
         {/* Fade the glow out at the bottom so it blends into the steps below. */}
-        <div className="to-rcv-night pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-linear-to-b from-transparent" />
+        <div className="to-paper pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-linear-to-b from-transparent" />
 
         {/* The wordmark is the title, in place of CS2.TEAM's banner image. Like that banner's band, this solid band hides the top of the glow so it only lights up behind the tagline and button. */}
-        <div className="from-rcv-night relative bg-linear-to-b from-75% to-transparent px-4 pt-20 pb-12 text-center sm:px-6 sm:pt-28 sm:pb-16">
+        <div className="from-paper relative bg-linear-to-b from-75% to-transparent px-4 pt-20 pb-12 text-center sm:px-6 sm:pt-28 sm:pb-16">
           <h2 className="font-display inline-flex items-center gap-4 text-[clamp(2.75rem,9vw,5.5rem)] leading-none font-bold tracking-tight">
             <ReviewCvMark className="h-[0.9em] w-[0.9em] shrink-0 drop-shadow-[0_10px_40px_rgba(47,125,255,0.6)]" />
             <span>
@@ -56,10 +53,9 @@ const ReviewCvShowcase: React.FC = () => {
         <div className="relative mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
           <p className="font-display mx-auto max-w-4xl text-[clamp(1.6rem,4vw,2.5rem)] leading-[1.15] font-semibold tracking-tight text-balance text-white">
             {reviewCv.tagline.lead}{" "}
-            <span className="text-rcv italic">
+            <span className="text-rcv pr-[0.08em] italic">
               {reviewCv.tagline.highlight}
-            </span>
-            <br />
+            </span>{" "}
             {reviewCv.tagline.rest}
           </p>
 
@@ -75,7 +71,7 @@ const ReviewCvShowcase: React.FC = () => {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-linear-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-[500%] motion-reduce:hidden"
               />
-              <span className="bg-rcv-night text-rcv relative grid h-8 w-8 place-items-center rounded-full">
+              <span className="bg-paper text-rcv relative grid h-8 w-8 place-items-center rounded-full">
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
                   className="text-[12px] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"

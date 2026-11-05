@@ -23,9 +23,9 @@ export interface Project {
 
 export const featured = {
   title: "CS2.TEAM",
-  // Shown on two lines with "largest" highlighted; the word joiner and no-break space keep "Counter-Strike 2" together.
+  // "largest" is highlighted; the word joiner and no-break space keep "Counter-Strike 2" together.
   tagline: {
-    lead: "I built the",
+    lead: "The",
     highlight: "largest",
     rest: "Counter-\u2060Strike\u00a02 team-finding platform.",
   },
@@ -70,7 +70,7 @@ export const featured = {
 export const reviewCv = {
   title: "ReviewCV",
   tagline: {
-    lead: "I built an",
+    lead: "An",
     highlight: "AI-powered",
     rest: "CV reviewer that gives free, instant feedback.",
   },

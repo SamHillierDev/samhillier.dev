@@ -19,7 +19,6 @@
   /* Background tone of the CS2.TEAM header banner, so its side fades disappear into the band. */
   --color-cs2-banner: #121119;
   --color-rcv: #2f7dff;
-  --color-rcv-night: #11151d;
 
   --animate-blink: blink 1s step-end infinite;
   --animate-wave: wave 1.8s ease-in-out 0.3s 1 both;
