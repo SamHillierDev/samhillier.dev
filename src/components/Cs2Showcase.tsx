@@ -13,29 +13,37 @@ const Cs2Showcase: React.FC = () => {
       id="cs2team"
       className="bg-cs2-night border-line border-y text-white"
     >
-      <div className="relative overflow-hidden pb-24 sm:pb-32">
+      <div className="relative overflow-hidden pb-12 sm:pb-16">
         <div className="pointer-events-none absolute top-[85%] left-1/2 aspect-square w-[140vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(255,106,0,0.28),transparent)]" />
         {/* Fade the glow out at the bottom so it blends into the stats below. */}
         <div className="to-cs2-night pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-linear-to-b from-transparent" />
 
-        {/* The logo is the title. Its dark background matches the section, so the band runs edge to edge and only fades at the bottom. */}
-        <div className="from-cs2-night relative bg-linear-to-b from-75% to-transparent">
-          <h2>
-            <img
-              src={featured.logo}
-              alt="CS2.TEAM"
-              width={1080}
-              height={1080}
-              className="mx-auto aspect-[16/9] w-full max-w-5xl [mask-image:linear-gradient(to_bottom,black_78%,transparent)] [mask-composite:intersect] object-cover min-[1024px]:[mask-image:linear-gradient(to_bottom,black_78%,transparent),linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]"
-            />
+        {/* The banner is the title, sized to the page's content column. The band behind it uses the banner's own background tone, so the edge fades are seamless at every width; it blends into the section at the bottom. */}
+        <div className="from-cs2-banner relative bg-linear-to-b from-75% to-transparent">
+          <h2 className="mx-auto max-w-6xl px-4 sm:px-6">
+            {/* The fade mask sits on the frame, not the image, so zooming the image in doesn't push the fades out of view. */}
+            <div className="aspect-[3/1] overflow-hidden [mask-image:linear-gradient(to_bottom,black_70%,transparent),linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] [mask-composite:intersect]">
+              <img
+                src={featured.logo}
+                alt="CS2.TEAM"
+                width={2172}
+                height={724}
+                className="h-full w-full scale-[1.5] object-cover"
+              />
+            </div>
           </h2>
         </div>
 
         <div className="relative mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
-          <div className="relative -mt-[7%]">
+          <div className="relative -mt-[3%]">
             <p className="text-sm text-white/55">Founded {featured.founded}</p>
-            <p className="font-display mx-auto mt-3 max-w-2xl text-xl font-medium text-balance whitespace-pre-line text-white/80 sm:text-2xl">
-              {featured.tagline}
+            <p className="font-cs2 mx-auto mt-3 max-w-4xl text-[clamp(1.6rem,4vw,2.5rem)] leading-[1.15] font-semibold tracking-tight text-balance text-white">
+              {featured.tagline.lead}{" "}
+              <span className="text-cs2 italic">
+                {featured.tagline.highlight}
+              </span>
+              <br />
+              {featured.tagline.rest}
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -105,69 +113,89 @@ const Cs2Showcase: React.FC = () => {
         </ul>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 pb-24 sm:px-6 md:grid-cols-3">
         <a
           href={press.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group hover:border-cs2/50 grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-[border-color,box-shadow] duration-300 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_20px_60px_-20px_rgba(255,106,0,0.5)] md:grid-cols-[6fr_5fr]"
+          className="group hover:border-cs2/50 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-[border-color,box-shadow] duration-300 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_20px_60px_-20px_rgba(255,106,0,0.5)]"
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden border-b border-white/10">
             <img
               src={press.image}
               alt={`CS2.TEAM featured in the ${press.outlet} Ecosystem Showcase`}
               loading="lazy"
-              className="aspect-[10/7] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           </div>
-          <div className="flex flex-col justify-center p-8 sm:p-12">
-            <p className="text-cs2 text-sm font-medium">
-              As featured on {press.outlet}
-            </p>
-            <h3 className="font-display mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="flex flex-col p-5">
+            <div className="flex items-center gap-3 text-sm">
+              <span className="bg-cs2/15 text-cs2 rounded-full px-2.5 py-0.5 font-medium">
+                Press
+              </span>
+              <time dateTime={press.date} className="text-white/60">
+                {new Date(press.date).toLocaleDateString("en-GB", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                  timeZone: "UTC",
+                })}
+              </time>
+            </div>
+            <h3 className="font-display mt-3 text-xl font-bold tracking-tight">
               {press.headline}
             </h3>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-white/75">
+            <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-white/70">
               {press.description}
             </p>
-            <span className="mt-8 inline-flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-[15px] font-medium text-white/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-colors duration-300 group-hover:border-white/25 group-hover:bg-white/[0.08] group-hover:text-white">
-              {press.linkLabel}
-              <FontAwesomeIcon
-                icon={faArrowUpRightFromSquare}
-                className="text-[11px] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"
-              />
-            </span>
           </div>
         </a>
-      </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-        <article className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] md:grid-cols-[6fr_5fr]">
-          <div className="flex flex-col justify-center p-8 sm:p-12">
-            <p className="text-cs2 text-sm font-medium">In partnership with</p>
-            <h3 className="font-display mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+        <a
+          href={partner.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group hover:border-cs2/50 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-[border-color,box-shadow] duration-300 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_20px_60px_-20px_rgba(255,106,0,0.5)]"
+        >
+          <div className="overflow-hidden border-b border-white/10">
+            <img
+              src={partner.image}
+              alt={`${partner.name} logo`}
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div className="flex flex-col p-5">
+            <div className="flex items-center gap-3 text-sm">
+              <span className="bg-cs2/15 text-cs2 rounded-full px-2.5 py-0.5 font-medium">
+                Partner
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-white/60 transition-colors duration-300 group-hover:text-white/90">
+                <FontAwesomeIcon icon={faXTwitter} className="text-[11px]" />
+                {partner.linkLabel}
+              </span>
+            </div>
+            <h3 className="font-display mt-3 text-xl font-bold tracking-tight">
               {partner.name}
             </h3>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-white/75">
+            <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-white/70">
               {partner.description}
             </p>
-            <a
-              href={partner.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-[15px] font-medium text-white/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-colors duration-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
-              {partner.linkLabel}
-            </a>
           </div>
-          <img
-            src={partner.image}
-            alt={`${partner.name} logo`}
-            loading="lazy"
-            className="order-first aspect-[4/3] h-full w-full object-cover md:order-last"
-          />
-        </article>
+        </a>
+
+        <div
+          aria-hidden="true"
+          className="hidden flex-col overflow-hidden rounded-2xl border border-white/[0.06] md:flex"
+        >
+          <div className="aspect-[16/10] w-full bg-white/[0.03]" />
+          <div className="flex flex-col gap-3 p-5">
+            <div className="h-5 w-1/4 rounded-full bg-white/[0.04]" />
+            <div className="mt-1 h-6 w-3/5 rounded-md bg-white/[0.04]" />
+            <div className="mt-1 h-4 w-full rounded bg-white/[0.03]" />
+            <div className="h-4 w-4/5 rounded bg-white/[0.03]" />
+          </div>
+        </div>
       </div>
     </section>
   );

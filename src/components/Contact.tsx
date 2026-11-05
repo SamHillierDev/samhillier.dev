@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { linkedIn } from "../data/socials";
+import { gitHub, linkedIn } from "../data/socials";
 
 const Contact: React.FC = () => (
   <section id="contact" className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -12,15 +12,26 @@ const Contact: React.FC = () => (
           <span className="text-mute">I'd love to hear from you!</span>
         </p>
 
-        <a
-          href={linkedIn.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-ink text-paper mt-10 inline-flex items-center gap-2.5 rounded-full px-5 py-2.5 text-sm font-medium transition-colors hover:bg-white sm:px-6 sm:py-3 sm:text-[15px] md:mt-12"
-        >
-          <FontAwesomeIcon icon={linkedIn.icon} className="text-[1.4em]" />
-          Connect on LinkedIn
-        </a>
+        <div className="isolate mt-10 flex flex-wrap gap-3 md:mt-12">
+          <a
+            href={linkedIn.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glow-ring bg-ink text-paper flex items-center gap-2.5 rounded-full px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white sm:px-6 sm:py-3 sm:text-[15px]"
+          >
+            <FontAwesomeIcon icon={linkedIn.icon} className="text-[1.4em]" />
+            Connect on LinkedIn
+          </a>
+          <a
+            href={gitHub.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-ink/35 text-ink hover:border-ink/70 flex items-center gap-2.5 rounded-full border bg-white/[0.06] px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white/[0.12] sm:px-6 sm:py-3 sm:text-[15px]"
+          >
+            <FontAwesomeIcon icon={gitHub.icon} className="text-[1.4em]" />
+            View GitHub
+          </a>
+        </div>
       </div>
     </div>
   </section>

@@ -4,7 +4,6 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const linkedIn = {
   name: "LinkedIn",
@@ -18,16 +17,9 @@ export const gitHub = {
   icon: faGithub,
 };
 
-export const email = {
-  name: "Email",
-  url: "mailto:sam@hillier.uk",
-  icon: faEnvelope,
-};
-
 export const socials = [
   linkedIn,
   gitHub,
-  email,
   { name: "X (Twitter)", url: "https://x.com/Zyphaex", icon: faXTwitter },
   {
     name: "Instagram",

@@ -14,7 +14,12 @@ function App() {
       <Nav />
       <main>
         {/* Hero and badges fill exactly one screen, so the next scroll lands on CS2.TEAM. */}
-        <div className="flex min-h-svh flex-col">
+        <div className="relative isolate flex min-h-svh flex-col">
+          {/* Faint grid behind the hero, fading out toward the edges and the badges. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgb(255_255_255/0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.06)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,black,transparent)] bg-size-[56px_56px] bg-center"
+          />
           <Hero />
           <Certifications />
         </div>

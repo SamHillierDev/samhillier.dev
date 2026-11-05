@@ -3,7 +3,7 @@ import {
   faMagnifyingGlass,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
-import cs2TeamLogo from "../assets/images/projects/cs2team-dark.jpg";
+import cs2TeamLogo from "../assets/images/projects/cs2team-header.jpg";
 import enjinFeature from "../assets/images/projects/enjin-feature.jpg";
 import derbyEsportsMockup from "../assets/images/projects/derby-esports-mockup.png";
 // import cleanappLogo from "../assets/images/projects/cleanapp-logo-blue.png";
@@ -20,15 +20,19 @@ export interface Project {
 
 export const featured = {
   title: "CS2.TEAM",
-  // Line break puts the game's name on the second line; the word joiner and no-break space keep "Counter-Strike 2" together.
-  tagline:
-    "I've built the largest\nCounter-\u2060Strike\u00a02 team-finding platform.",
+  // Shown on two lines with "largest" highlighted; the word joiner and no-break space keep "Counter-Strike 2" together.
+  tagline: {
+    lead: "I built the",
+    highlight: "largest",
+    rest: "Counter-\u2060Strike\u00a02 team-finding platform.",
+  },
   founded: "March 2023",
   logo: cs2TeamLogo,
   link: "https://cs2.team",
   linkLabel: "Visit CS2.TEAM",
   press: {
     outlet: "Enjin",
+    date: "2026-05-09",
     headline: "CS2.TEAM Introduces NFTs to Esports Team Finder",
     description:
       "Enjin spotlighted CS2.TEAM in its Ecosystem Showcase, covering how the platform brings NFTs to esports team-finding.",
