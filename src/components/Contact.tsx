@@ -17,7 +17,7 @@ const Contact: React.FC = () => (
             href={linkedIn.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glow-ring bg-ink text-paper flex items-center gap-2.5 rounded-full px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white sm:px-6 sm:py-3 sm:text-[15px]"
+            className="glow-ring bg-ink text-paper flex items-center gap-2.5 rounded-full px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white sm:px-6 sm:py-3 sm:text-[0.9375rem]"
           >
             <FontAwesomeIcon icon={linkedIn.icon} className="text-[1.4em]" />
             Connect on LinkedIn
@@ -26,7 +26,7 @@ const Contact: React.FC = () => (
             href={gitHub.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-ink/35 text-ink hover:border-ink/70 flex items-center gap-2.5 rounded-full border bg-white/[0.06] px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white/[0.12] sm:px-6 sm:py-3 sm:text-[15px]"
+            className="border-ink/35 text-ink hover:border-ink/70 flex items-center gap-2.5 rounded-full border bg-white/[0.06] px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white/[0.12] sm:px-6 sm:py-3 sm:text-[0.9375rem]"
           >
             <FontAwesomeIcon icon={gitHub.icon} className="text-[1.4em]" />
             View GitHub

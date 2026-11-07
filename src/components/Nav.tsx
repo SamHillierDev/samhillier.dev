@@ -16,9 +16,9 @@ const Nav: React.FC = () => (
     <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-4 sm:px-6">
       <a
         href="#top"
-        className="font-display flex items-center gap-2 text-[15px] font-semibold"
+        className="font-display flex items-center gap-2 text-[0.9375rem] font-semibold"
       >
-        <Monogram className="h-6 w-6 text-[10px]" />
+        <Monogram className="h-6 w-6 text-[0.625rem]" />
         Sam Hillier
       </a>
       <div className="flex items-center gap-2">
@@ -27,7 +27,7 @@ const Nav: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Connect on LinkedIn"
-          className="bg-ink text-paper flex h-8 items-center gap-2 rounded-full px-3 text-[13px] font-medium transition-colors hover:bg-white sm:px-4"
+          className="bg-ink text-paper flex h-8 items-center gap-2 rounded-full px-3 text-[0.8125rem] font-medium transition-colors hover:bg-white sm:px-4"
         >
           <FontAwesomeIcon icon={linkedIn.icon} />
           <span className="hidden sm:inline">Connect on LinkedIn</span>
@@ -37,7 +37,7 @@ const Nav: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="View GitHub"
-          className="border-line hover:border-ink/60 flex h-8 items-center gap-2 rounded-full border px-3 text-[13px] font-medium transition-colors sm:px-4"
+          className="border-line hover:border-ink/60 flex h-8 items-center gap-2 rounded-full border px-3 text-[0.8125rem] font-medium transition-colors sm:px-4"
         >
           <FontAwesomeIcon icon={gitHub.icon} />
           <span className="hidden sm:inline">View GitHub</span>

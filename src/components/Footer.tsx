@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <footer className="border-line border-t">
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center justify-between gap-4 px-4 py-8 text-sm text-white/50 sm:flex-row sm:px-6">
         <p className="flex items-center gap-2">
-          <Monogram className="h-5 w-5 text-[8px]" />© {currentYear} Sam Hillier
+          <Monogram className="h-5 w-5 text-[0.5rem]" />© {currentYear} Sam Hillier
         </p>
         <ul className="flex gap-5">
           {socials.map((social) => (

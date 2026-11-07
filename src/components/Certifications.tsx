@@ -61,8 +61,18 @@ function useDraggableMarquee() {
     const track = trackRef.current;
     if (prefersReducedMotion || !viewport || !track) return;
 
+    // The layout scales with the root font size on large screens, so the cruise speed does too.
+    let cruise = AUTO_SPEED;
+    const updateCruise = () => {
+      const rem = parseFloat(
+        getComputedStyle(document.documentElement).fontSize,
+      );
+      cruise = AUTO_SPEED * (rem / 16 || 1);
+    };
+    updateCruise();
+
     let offset = 0;
-    let velocity = AUTO_SPEED;
+    let velocity = cruise;
     let paused = false;
     let frame = 0;
     let lastFrame = performance.now();
@@ -84,7 +94,7 @@ function useDraggableMarquee() {
       lastFrame = now;
 
       if (!drag.active) {
-        const target = paused ? 0 : AUTO_SPEED;
+        const target = paused ? 0 : cruise;
         velocity += (target - velocity) * (1 - Math.exp(-EASE * dt));
         offset += velocity * dt;
       }
@@ -186,10 +196,12 @@ function useDraggableMarquee() {
     viewport.addEventListener("pointerleave", resume);
     viewport.addEventListener("focusin", pause);
     viewport.addEventListener("focusout", resume);
+    window.addEventListener("resize", updateCruise);
     frame = requestAnimationFrame(tick);
 
     return () => {
       cancelAnimationFrame(frame);
+      window.removeEventListener("resize", updateCruise);
       viewport.removeEventListener("pointerdown", onPointerDown);
       viewport.removeEventListener("pointermove", onPointerMove);
       viewport.removeEventListener("pointerup", onPointerUp);
@@ -229,7 +241,7 @@ const Certifications: React.FC = () => {
           <path d="m9 11 3 3L22 4" />
         </svg>
         <h2 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">
-          Don't just take my word for it.
+          Certifications
           <span className="text-mute block">
             {certifications.length} certifications across AWS and Azure.
           </span>

@@ -72,10 +72,28 @@
           rgb(255 255 255 / 0.09),
           transparent 70%
         )
-        0 0 / 100% 900px no-repeat,
+        0 0 / 100% 56rem no-repeat,
       var(--color-paper);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Large and 4K displays: everything is sized in rem, so stepping up the root size scales the
+     whole layout (column width, type, spacing) instead of leaving a narrow strip in the middle.
+     Stepped breakpoints rather than vw so browser zoom still works. */
+  html {
+    @media (min-width: 1800px) {
+      font-size: 112.5%;
+    }
+    @media (min-width: 2200px) {
+      font-size: 125%;
+    }
+    @media (min-width: 2800px) {
+      font-size: 150%;
+    }
+    @media (min-width: 3400px) {
+      font-size: 200%;
+    }
   }
 
   section[id] {
@@ -123,7 +141,7 @@
 
   /* Crisp 1.5px ring, offset from the button. */
   &::before {
-    inset: -6px;
+    inset: -0.375rem;
     padding: 1.5px;
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
@@ -136,9 +154,9 @@
 
   /* Soft bloom behind the ring. */
   &::after {
-    inset: -10px;
+    inset: -0.625rem;
     z-index: -1;
-    filter: blur(12px);
+    filter: blur(0.75rem);
     opacity: 0.55;
   }
 

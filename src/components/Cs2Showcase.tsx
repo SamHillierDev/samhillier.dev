@@ -60,10 +60,10 @@ const Cs2Showcase: React.FC = () => {
                 <span className="bg-cs2-night text-cs2 relative grid h-8 w-8 place-items-center rounded-full">
                   <FontAwesomeIcon
                     icon={faArrowUpRightFromSquare}
-                    className="text-[12px] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"
+                    className="text-[0.75rem] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"
                   />
                 </span>
-                <span className="font-cs2 relative text-[17px] font-semibold italic">
+                <span className="font-cs2 relative text-[1.0625rem] font-semibold italic">
                   {featured.linkLabel}
                 </span>
               </a>
@@ -155,7 +155,7 @@ const Cs2Showcase: React.FC = () => {
             <h3 className="font-display mt-3 text-xl font-bold tracking-tight">
               {press.headline}
             </h3>
-            <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-white/70">
+            <p className="mt-2 line-clamp-3 text-[0.9375rem] leading-relaxed text-white/70">
               {press.description}
             </p>
           </div>
@@ -188,7 +188,7 @@ const Cs2Showcase: React.FC = () => {
             <h3 className="font-display mt-3 text-xl font-bold tracking-tight">
               {partner.name}
             </h3>
-            <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-white/70">
+            <p className="mt-2 line-clamp-3 text-[0.9375rem] leading-relaxed text-white/70">
               {partner.description}
             </p>
           </div>

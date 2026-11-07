@@ -74,10 +74,10 @@ const ReviewCvShowcase: React.FC = () => {
               <span className="bg-paper text-rcv relative grid h-8 w-8 place-items-center rounded-full">
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
-                  className="text-[12px] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"
+                  className="text-[0.75rem] transition-transform duration-300 group-hover:translate-x-px group-hover:-translate-y-px"
                 />
               </span>
-              <span className="font-display relative text-[17px] font-semibold">
+              <span className="font-display relative text-[1.0625rem] font-semibold">
                 {reviewCv.linkLabel}
               </span>
             </a>
